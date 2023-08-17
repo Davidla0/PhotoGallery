@@ -1,0 +1,124 @@
+.add-photo {
+
+    /* Default styling for .plus-icon */
+    .plus-icon {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.3s ease, right 0.3s ease;
+    }
+
+    /* Styling for .plus-icon when .open class is added */
+    .plus-icon.open {
+        transform: rotate(45deg);
+        right: 5px;
+    }
+
+
+    .add-photo-form {
+        margin: auto;
+        width: 45%;
+        height: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fffffff7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        border-radius: 12px;
+        padding: 20px;
+
+        form {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            color: white;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 3px solid #dcdcdc;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #a0a0a0;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #67b46f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        h3 {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .add-photo-form.open {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .add-photo .add-photo-form{
+        width: 65%;
+
+        form {
+                width: 100%;
+        }
+    } 
+}
+
+@media (min-width: 768px) {
+
+    .add-photo .add-photo-form form {
+            width: 80%;
+    }
+}
